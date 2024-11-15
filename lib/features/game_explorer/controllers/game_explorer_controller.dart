@@ -3,6 +3,8 @@ import 'package:brain_train_alpha/features/game_explorer/games/twin_match/twin_m
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
+import '../games/tower_of_hanoi/tower_of_hanoi.dart';
+
 class GameExplorerController extends GetxController {
   final games = [
     GameModel(
@@ -11,7 +13,7 @@ class GameExplorerController extends GetxController {
         tileColor: Colors.green.shade50),
     GameModel(
         name: 'Tower of Hanoi',
-        gameScreen: TwinMatchScreen(),
+        gameScreen: TowerOfHanoi(),
         tileColor: Colors.blue.shade50),
   ];
 }

@@ -20,40 +20,24 @@ enum NetworkResultType {
   notFound
 }
 
-enum UserContentType {
-  story,
-  general,
+enum GameName {
+  twinMatch,
+  towerOfHanoi,
 }
 
-enum MediaType { image, video }
-
-enum FilterType {
-  date,
-  time,
-  city,
-  reciter,
-  typeOfEvent,
-  event,
-  age,
-  organization
+enum CurrentHanoiDiskState {
+  neutral,
+  up,
+  slide,
+  down,
 }
 
-enum ImageType {
-  local,
-  network,
+enum HanoiDiskMove {
+  none,
+  upMove,
+  downMove,
+  halfRight,
+  halfLeft,
+  fullRight,
+  fullLeft
 }
-
-enum UserListContentType {
-  blocked,
-  muted,
-}
-
-enum TagUsersPostType {
-  post,
-  offer,
-  event,
-}
-
-enum OfferType { requested, accepted, rejected }
-
-enum GameName { twinMatch, towerOfHanoi }

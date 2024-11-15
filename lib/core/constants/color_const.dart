@@ -6,6 +6,15 @@ class ColorConst {
 
   static const Color primaryColor = Color(0xff8C74FB);
   static const Color primaryLightColor = Color(0xffAF9EFD);
+  static const Color woodColor = Color(0xffbc6c25);
+  static const List<Color> hanoiDiskColors = [
+    Color(0xff78290f),
+    Color(0xff15616d),
+    Color(0xff012a4a),
+    Color(0xffe29578),
+  ];
+  static const Color hanoiBgColor = Color(0xff283618);
+  static const Color hanoiTextColor = Color(0xffa7c957);
   static const Color greyColor = Color(0xffCBCBCB);
   static const Color blackColor = Color(0xff000000);
   static const Color darkSmokeGray = Color(0x801E1E2C);

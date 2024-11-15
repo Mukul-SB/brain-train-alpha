@@ -100,12 +100,14 @@ class AppUtils {
   }
 
   static Future<void> config() async {
-    await _getDeviceId();
+    if (!kIsWeb) {
+      await _getDeviceId();
 
-    if (Platform.isAndroid) {
-      androidInfo = await deviceInfoPlugin.androidInfo;
-    } else {
-      iosInfo = await deviceInfoPlugin.iosInfo;
+      if (Platform.isAndroid) {
+        androidInfo = await deviceInfoPlugin.androidInfo;
+      } else {
+        iosInfo = await deviceInfoPlugin.iosInfo;
+      }
     }
   }
 
