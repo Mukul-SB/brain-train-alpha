@@ -103,4 +103,7 @@ class AppString {
 
   // Preference Storage Keys
   static const String currentBuildModeKey = "currentBuildModeKey";
+
+  // Game Explorer
+  static const String gameExplorer = "Game Explorer";
 }

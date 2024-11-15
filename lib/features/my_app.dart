@@ -1,8 +1,8 @@
+import 'package:brain_train_alpha/features/game_explorer/game_explorer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:brain_train_alpha/core/localization/localization.dart';
 import 'package:brain_train_alpha/core/storage/preference_storage.dart';
-import 'package:brain_train_alpha/features/onboarding/welcome_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../core/basic_features.dart';
@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             themeMode: ThemeMode.system,
             debugShowCheckedModeBanner: false,
             title: AppString.appName,
-            home: const WelcomeScreen(),
+            home:  GameExplorerScreen(),
           ),
         ),
       );
