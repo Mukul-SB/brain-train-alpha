@@ -17,7 +17,7 @@ class Environment {
     config = _configMap[environment] ?? DevConfig();
 
     // Configuring Amplify
-    CognitoHelpingHand.configureAmplify(environment: environment);
+    // CognitoHelpingHand.configureAmplify(environment: environment);
   }
 
   static const String development = 'DEV';

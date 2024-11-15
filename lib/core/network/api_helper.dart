@@ -653,10 +653,9 @@ class APIHelper {
   Future<void> updateHeaders() async => await _createHeaders();
 
   Future<bool> isConnected() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult == ConnectivityResult.mobile) {
-      return true;
-    } else if (connectivityResult == ConnectivityResult.wifi) {
+    var connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult.contains(ConnectivityResult.mobile) ||
+        connectivityResult.contains(ConnectivityResult.wifi)) {
       return true;
     }
     return false;

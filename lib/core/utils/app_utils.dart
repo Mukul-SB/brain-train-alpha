@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:amplify_core/amplify_core.dart';
 import 'package:crypto/crypto.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:uuid/uuid.dart';
-import 'package:video_thumbnail/video_thumbnail.dart';
+// import 'package:video_thumbnail/video_thumbnail.dart';
 
 import '../basic_features.dart';
 import '../storage/preference_storage.dart';
@@ -52,7 +51,7 @@ String formatDateFromTO(String startTimestamp, String endTimestamp) {
       return "${formattedStartDate}th $formattedStartMonth to ${formattedEndDate}th $formattedEndMonth";
     }
   } catch (e) {
-    safePrint('Error parsing timestamps: $e');
+    logger.e('Error parsing timestamps: $e');
     return 'Invalid date range';
   }
 }
@@ -326,17 +325,17 @@ class AppUtils {
     }
   }
 
-  static Future<String?> genThumbnailFile(String path) async {
-    final fileName = await VideoThumbnail.thumbnailFile(
-      video: path,
-      timeMs: 100,
-      thumbnailPath: (await getTemporaryDirectory()).path,
-      imageFormat: ImageFormat.JPEG,
-    );
-
-    logger.f("Generated This Thumb -> $fileName");
-    return fileName;
-  }
+  // static Future<String?> genThumbnailFile(String path) async {
+  //   final fileName = await VideoThumbnail.thumbnailFile(
+  //     video: path,
+  //     timeMs: 100,
+  //     thumbnailPath: (await getTemporaryDirectory()).path,
+  //     imageFormat: ImageFormat.JPEG,
+  //   );
+  //
+  //   logger.f("Generated This Thumb -> $fileName");
+  //   return fileName;
+  // }
 
   static bool isVideoFile(String filePath) {
     final supportedVideoExtensions = [
