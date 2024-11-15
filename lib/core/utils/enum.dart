@@ -55,3 +55,5 @@ enum TagUsersPostType {
 }
 
 enum OfferType { requested, accepted, rejected }
+
+enum GameName { twinMatch, towerOfHanoi }

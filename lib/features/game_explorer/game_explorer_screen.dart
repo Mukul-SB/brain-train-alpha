@@ -22,18 +22,21 @@ class GameExplorerScreen extends StatelessWidget {
         itemCount: controller.games.length,
         itemBuilder: (context, index) => Padding(
           padding: index != controller.games.length - 1
-              ? EdgeInsets.only(bottom: Dimensions.h15)
+              ? EdgeInsets.only(bottom: Dimensions.h10)
               : EdgeInsets.zero,
-          child: ListTile(
-            contentPadding: EdgeInsets.symmetric(
-                vertical: Dimensions.h12, horizontal: Dimensions.h16),
-            tileColor: AppUtils.getRandomColor().withOpacity(0.3),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            title: Text(
-              controller.games[index],
-              style: fontStyleSemiBold20.copyWith(
-                  fontSize: Dimensions.sp20, color: Colors.black87),
+          child: Card(
+            child: ListTile(
+              onTap: () => Get.to(controller.games[index].gameScreen),
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: Dimensions.h10, horizontal: Dimensions.h16),
+              tileColor: controller.games[index].tileColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              title: Text(
+                controller.games[index].name,
+                style: fontStyleSemiBold20.copyWith(
+                    fontSize: Dimensions.sp20, color: Colors.black87),
+              ),
             ),
           ),
         ),

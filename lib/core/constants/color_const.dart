@@ -44,4 +44,6 @@ class ColorConst {
   static const Color likeButtonBorderColor = Color(0xFFF1F1F1);
   static const Color greyText = Color(0xFFbcbcbc);
   static const Color dateContainer = Color(0xFF3E6BA8);
+
+  static const Color twinMatchBackgroundColor = Color(0xFF073b4c);
 }
