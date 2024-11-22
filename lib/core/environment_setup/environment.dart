@@ -1,4 +1,3 @@
-import '../aws_services/amplify_configuration.dart';
 import 'base_config.dart';
 import 'build_config.dart';
 

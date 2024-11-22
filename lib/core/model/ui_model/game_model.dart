@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 class GameModel {
   final String name;
-  final Widget gameScreen;
+  final VoidCallback navigateToGameScreen;
   final Color tileColor;
 
   GameModel({
-    required this.gameScreen,
+    required this.navigateToGameScreen,
     required this.name,
     required this.tileColor,
   });

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../core/basic_features.dart';
 import 'controllers/game_explorer_controller.dart';
@@ -6,14 +7,17 @@ import 'controllers/game_explorer_controller.dart';
 class GameExplorerScreen extends StatelessWidget {
   GameExplorerScreen({super.key});
 
-  final controller = Get.put(GameExplorerController());
+  final controller = GameExplorerController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConst.blackColor,
       appBar: AppBar(
+        backgroundColor: ColorConst.blackColor,
         title: Text(AppString.gameExplorer,
-            style: fontStyleSemiBold10.copyWith(fontSize: Dimensions.sp20)),
+            style: fontStyleSemiBold10.copyWith(
+                fontSize: Dimensions.sp20, color: ColorConst.whiteColor)),
       ),
       body: ListView.builder(
         padding:
@@ -25,8 +29,10 @@ class GameExplorerScreen extends StatelessWidget {
               ? EdgeInsets.only(bottom: Dimensions.h10)
               : EdgeInsets.zero,
           child: Card(
+            shadowColor: ColorConst.greyColor,
+            elevation: 2,
             child: ListTile(
-              onTap: () => Get.to(controller.games[index].gameScreen),
+              onTap: () => controller.games[index].navigateToGameScreen(),
               contentPadding: EdgeInsets.symmetric(
                   vertical: Dimensions.h10, horizontal: Dimensions.h16),
               tileColor: controller.games[index].tileColor,

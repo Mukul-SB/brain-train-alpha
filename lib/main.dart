@@ -8,8 +8,9 @@ import 'features/my_app.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializingInitials();
-  Future.delayed(
-      const Duration(milliseconds: 500), () => runApp(const MyApp()));
+  // Future.delayed(
+  //     const Duration(milliseconds: 500), () => runApp(const MyApp()));
+  runApp(const MyApp());
 }
 
 Future<void> initializingInitials() async {

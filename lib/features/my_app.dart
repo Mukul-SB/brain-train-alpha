@@ -1,8 +1,7 @@
-import 'package:brain_train_alpha/features/game_explorer/game_explorer_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:brain_train_alpha/core/localization/localization.dart';
 import 'package:brain_train_alpha/core/storage/preference_storage.dart';
+import 'package:brain_train_alpha/features/game_explorer/game_explorer_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../core/basic_features.dart';
@@ -26,22 +25,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
     // NotificationManager().init();
     // FirebaseNotifications().initialize();
-
     super.initState();
   }
 
-  @override
-  void didChangePlatformBrightness() {
-    super.didChangePlatformBrightness();
-    Brightness brightness = MediaQuery.of(context).platformBrightness;
 
-    setState(() {
-      this.brightness = brightness;
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: brightness));
-    });
-  }
 
   @override
   Widget build(BuildContext context) => ScreenUtilInit(
@@ -64,10 +51,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             darkTheme: AppThemeData.darkTheme,
             theme: AppThemeData.lightTheme,
             defaultTransition: Transition.cupertino,
-            themeMode: ThemeMode.system,
+            themeMode: ThemeMode.dark,
             debugShowCheckedModeBanner: false,
             title: AppString.appName,
-            home:  GameExplorerScreen(),
+            home: GameExplorerScreen(),
           ),
         ),
       );

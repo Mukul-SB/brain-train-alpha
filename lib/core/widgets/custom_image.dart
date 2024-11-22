@@ -1,7 +1,7 @@
+import 'package:brain_train_alpha/core/basic_features.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:brain_train_alpha/core/basic_features.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomNetworkImage extends StatelessWidget {

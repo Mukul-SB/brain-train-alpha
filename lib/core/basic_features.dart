@@ -1,6 +1,6 @@
+export 'package:brain_train_alpha/core/theme/color_scheme_extension.dart';
 export 'package:flutter/foundation.dart';
 export 'package:flutter_easyloading/flutter_easyloading.dart';
-export 'package:brain_train_alpha/core/theme/color_scheme_extension.dart';
 export 'package:get/get.dart';
 
 export 'constants/app_image.dart';

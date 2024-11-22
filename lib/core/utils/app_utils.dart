@@ -17,6 +17,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:uuid/uuid.dart';
+
 // import 'package:video_thumbnail/video_thumbnail.dart';
 
 import '../basic_features.dart';
@@ -445,9 +446,9 @@ class AppUtils {
     return RegExp(emailPattern).hasMatch(email);
   }
 
-  static showToast(val) => Fluttertoast.showToast(
-      msg: val,
-      toastLength: Toast.LENGTH_LONG,
+  static showToast(String value, {Toast? toastLength}) => Fluttertoast.showToast(
+      msg: value,
+      toastLength: toastLength,
       gravity: ToastGravity.BOTTOM,
       backgroundColor: ColorConst.blackColor,
       textColor: Colors.white,

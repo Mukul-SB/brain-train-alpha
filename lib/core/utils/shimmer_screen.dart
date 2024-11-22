@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:brain_train_alpha/core/utils/shimmer_effect.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter/material.dart';
 
 import '../basic_features.dart';
 

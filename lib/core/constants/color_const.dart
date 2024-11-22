@@ -46,4 +46,5 @@ class ColorConst {
   static const Color dateContainer = Color(0xFF3E6BA8);
 
   static const Color twinMatchBackgroundColor = Color(0xFF073b4c);
+  static const Color twinMatchDialogBackgroundColor = Color(0xff072732);
 }

@@ -30,23 +30,21 @@ class AppThemeData {
     ),
     tabBarTheme: TabBarTheme(
       splashFactory: NoSplash.splashFactory,
-      overlayColor: MaterialStateProperty.resolveWith<Color?>(
-          (Set<MaterialState> states) {
+      overlayColor:
+          WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
         // Use the default focused overlay color
-        return states.contains(MaterialState.focused)
-            ? null
-            : Colors.transparent;
+        return states.contains(WidgetState.focused) ? null : Colors.transparent;
       }),
     ),
     navigationBarTheme: NavigationBarThemeData(
-      iconTheme: MaterialStateProperty.all(const IconThemeData(
+      iconTheme: WidgetStateProperty.all(const IconThemeData(
         color: Colors.black, // Set the color for your icons here
       )),
       surfaceTintColor: Colors.white,
       backgroundColor: Colors.white,
       labelTextStyle:
-          MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-        if (states.contains(MaterialState.selected)) {
+          WidgetStateProperty.resolveWith((Set<WidgetState> states) {
+        if (states.contains(WidgetState.selected)) {
           return fontStyleSemiBold12.apply(
             color: ColorConst.backgroundColorDark,
           );
@@ -95,23 +93,21 @@ class AppThemeData {
     ),
     tabBarTheme: TabBarTheme(
       splashFactory: NoSplash.splashFactory,
-      overlayColor: MaterialStateProperty.resolveWith<Color?>(
-          (Set<MaterialState> states) {
+      overlayColor:
+          WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
         // Use the default focused overlay color
-        return states.contains(MaterialState.focused)
-            ? null
-            : Colors.transparent;
+        return states.contains(WidgetState.focused) ? null : Colors.transparent;
       }),
     ),
     navigationBarTheme: NavigationBarThemeData(
-      iconTheme: MaterialStateProperty.all(const IconThemeData(
+      iconTheme: WidgetStateProperty.all(const IconThemeData(
         color: Colors.white, // Set the color for your icons here
       )),
       backgroundColor: ColorConst.backgroundColorDark,
       surfaceTintColor: ColorConst.backgroundColorDark,
       labelTextStyle:
-          MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-        if (states.contains(MaterialState.selected)) {
+          WidgetStateProperty.resolveWith((Set<WidgetState> states) {
+        if (states.contains(WidgetState.selected)) {
           return fontStyleSemiBold12.apply(color: ColorConst.whiteColor);
         } else {
           return fontStyleRegular12.apply(color: ColorConst.whiteColor);
